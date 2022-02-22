@@ -1,9 +1,9 @@
 #!/bin/bash
 
-ROOT=~/.certbot-src
+DIR=/opt/certbot-src
 
 # Remove symbolic link and source folder.
-sudo rm /usr/local/bin/certbot
-rm -fr $ROOT
+rm /usr/local/bin/certbot
+rm -rf $DIR
 
 echo "Source based CertBot installation removed."
