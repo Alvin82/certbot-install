@@ -10,13 +10,13 @@ This makes Certbot is useful since Ubuntu 20.04 Focal. Probably for latest Debia
 Run the following command with a sudoer:
 
 ```bash
-curl -o- https://raw.githubusercontent.com/vinyll/certbot-install/master/install.sh | bash
+curl -o- https://raw.githubusercontent.com/Alvin82/certbot-install/master/install.sh | sudo bash
 ```
 
 ## How to Uninstall
 
 ```bash
-curl -o- https://raw.githubusercontent.com/vinyll/certbot-install/master/uninstall.sh | bash
+curl -o- https://raw.githubusercontent.com/Alvin82/certbot-install/master/uninstall.sh | sudo bash
 ```
 
 ## Why this instead of the official install?
