@@ -2,7 +2,8 @@
 
 Install latest version of [certbot](https://github.com/certbot/certbot).
 
-This makes Certbot is useful since Ubuntu 20.04 Focal. Probably for latest Debian as well and is also valid for Ubuntu 21.04 / 21.10.
+This makes Certbot is useful with the latest Ubuntu—still very helpful with Ubuntu25.10.
+Probably for latest Debian as well and is also valid for older Ubuntu 21.04 / 21.10.
 
 
 ## How to Install
@@ -12,6 +13,7 @@ Run the following command with a sudoer:
 ```bash
 curl -o- https://raw.githubusercontent.com/Alvin82/certbot-install/master/install.sh | sudo bash
 ```
+> If you meet any error, see the [Troubleshooting](#Troubleshooting) section below.
 
 ## How to Uninstall
 
@@ -23,10 +25,20 @@ curl -o- https://raw.githubusercontent.com/Alvin82/certbot-install/master/uninst
 
 You may prefer the regular installation of certbot from official PPA.
 
-However, if you experiment [the following error with Ubuntu Focal 20.04](https://github.com/certbot/certbot/issues/7951), this install should solve.
+However, if you experiment [the following error with some Ubuntu releases](https://github.com/certbot/certbot/issues/7951), this install will prevent and solve.
 
 ```
 AttributeError: module 'acme.challenges' has no attribute 'TLSSNI01'
 ```
 
-This is also interesting if you need to work with the latest release of certbot.
+This is also interesting if you need to work with the latest release of certbot at all.
+
+## Troubleshooting
+
+Error:
+_error: command '/usr/bin/x86_64-linux-gnu-gcc' failed with exit code 1_:
+
+Fix:
+```sh
+sudo apt install -y libaugeas-dev
+```
